@@ -8,10 +8,10 @@ namespace Problem2
 {
     public class ListNode
     {
-        public long val;
+        public int val;
         public ListNode next;
 
-        public ListNode(long i)
+        public ListNode(int i)
         {
             val = i;
             next = null;
@@ -26,7 +26,7 @@ namespace Problem2
             }
         }
 
-        public void AddToEnd(long val)
+        public void AddToEnd(int val)
         {
             if (next == null)
                 next = new ListNode(val);
@@ -44,7 +44,7 @@ namespace Problem2
             headNode = null;
         }
 
-        public void AddToEnd(long val)
+        public void AddToEnd(int val)
         {
             if(headNode == null)
             {
@@ -56,7 +56,7 @@ namespace Problem2
             }
         }
 
-        public void AddToStart(long val)
+        public void AddToStart(int val)
         {
             if(headNode == null)
             {
@@ -84,15 +84,15 @@ namespace Problem2
         static void Main(string[] args)
         {
 
-            ListNode l1 = new ListNode(2);
-            l1.AddToEnd(4);
-            l1.AddToEnd(3);
+            ListNode l1 = new ListNode(1);
+            //l1.AddToEnd(4);
+            //l1.AddToEnd(3);
 
-            ListNode l2 = new ListNode(5);
-            l2.AddToEnd(6);
-            l2.AddToEnd(4);
+            ListNode l2 = new ListNode(9);
+            l2.AddToEnd(9);
+            //l2.AddToEnd(4);
 
-            Solution1 sol = new Solution1();
+            Solution2 sol = new Solution2();
 
             ListNode result = sol.AddTwoNumbers(l1, l2);
 

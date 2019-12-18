@@ -11,39 +11,39 @@ namespace Problem2
         public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
             ListNode currentNode1 = l1;
-            long multiplier1 = 1;
-            long firstNumber = 0;
+            int multiplier1 = 1;
+            int firstNumber = 0;
             while (currentNode1 != null)
             {
-                firstNumber += (long)currentNode1.val * multiplier1;
+                firstNumber += (int)currentNode1.val * multiplier1;
                 currentNode1 = currentNode1.next;
                 multiplier1 *= 10;
             }
 
             ListNode currentNode2 = l2;
-            long multiplier2 = 1;
-            long secondNumber = 0;
+            int multiplier2 = 1;
+            int secondNumber = 0;
             while (currentNode2 != null)
             {
-                secondNumber += (long)currentNode2.val * multiplier2;
+                secondNumber += (int)currentNode2.val * multiplier2;
                 currentNode2 = currentNode2.next;
                 multiplier2 *= 10;
             }
 
-            long sum = firstNumber + secondNumber;
+            int sum = firstNumber + secondNumber;
 
             if (sum == 0)
             {
                 return new ListNode(0);
             }
 
-            long digitsInSum = NumberOfDigitsInANumber(sum);
+            int digitsInSum = NumberOfDigitsInANumber(sum);
 
             ListNode finalList = null;
 
             while (digitsInSum != 0)
             {
-                long divisor = (long)(Math.Pow(10, (digitsInSum - 1)));
+                int divisor = (int)(Math.Pow(10, (digitsInSum - 1)));
                 finalList = AddToBeginningOfList(finalList, sum / divisor);
                 sum = sum % divisor;
                 digitsInSum--;
@@ -53,10 +53,10 @@ namespace Problem2
         }
 
 
-        public static long NumberOfDigitsInANumber(long number)
+        public static int NumberOfDigitsInANumber(int number)
         {
-            long count = 0;
-            long divisor = 1;
+            int count = 0;
+            int divisor = 1;
             while ((number / divisor) != 0)
             {
                 count++;
@@ -66,7 +66,7 @@ namespace Problem2
             return count;
         }
 
-        public static ListNode AddToBeginningOfList(ListNode n, long val)
+        public static ListNode AddToBeginningOfList(ListNode n, int val)
         {
             ListNode temp = n;
             ListNode HeadNode;
