@@ -84,15 +84,15 @@ namespace Problem2
         static void Main(string[] args)
         {
 
-            ListNode l1 = new ListNode(1);
-            //l1.AddToEnd(4);
+            ListNode l1 = new ListNode(7);
+            l1.AddToEnd(1);
             //l1.AddToEnd(3);
 
             ListNode l2 = new ListNode(9);
             l2.AddToEnd(9);
-            //l2.AddToEnd(4);
+            l2.AddToEnd(9);
 
-            Solution2 sol = new Solution2();
+            Solution3 sol = new Solution3();
 
             ListNode result = sol.AddTwoNumbers(l1, l2);
 

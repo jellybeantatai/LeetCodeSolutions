@@ -56,33 +56,6 @@ namespace Problem2
             {
                 AddToEndOfList(result, carry);
             }
-
-            //else if(currentL1Node == null)
-            //{
-            //    if(carry == 1)
-            //    {
-            //        currentL2Node.val++;
-            //    }
-            //    while (currentL2Node != null)
-            //    {
-            //        AddToEndOfList(result, currentL2Node.val);
-            //        currentL2Node = currentL2Node.next;
-            //    }
-            //}
-
-            //else
-            //{
-            //    if (carry == 1)
-            //    {
-            //        currentL1Node.val++;
-            //    }
-            //    while (currentL1Node != null)
-            //    {
-            //        AddToEndOfList(result, currentL1Node.val);
-            //        currentL1Node = currentL1Node.next;
-            //    }
-            //}
-
             return result;
         }
 
